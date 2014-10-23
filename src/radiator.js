@@ -44,7 +44,7 @@ JenkinsRadiator.JobsCollection = Backbone.Collection.extend({
   },
   disabledCount:function(){
       var builds = this.filter(function(job){
-         return job.get("color") === "grey";
+         return job.get("color") === config.states.disabled;
       });
       return builds.length;
   },
